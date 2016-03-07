@@ -1,0 +1,30 @@
+import smbus
+import time
+
+# Get I2C bus
+bus = smbus.SMBus(1)
+
+# MCP23008 address, 0x20(32)
+# Select IODIR register, 0x00(00)
+#		0xFF(255)	All pins are configured as input
+bus.write_byte_data(0x20, 0x00, 0xFF)
+
+# MCP23008 address, 0x20(32)
+# Select GPPU register, 0x06(06)
+#		0xFF(255)	Pull-up enabled on all pins
+bus.write_byte_data(0x20, 0x06, 0xFF)
+
+# Output to screen
+print "Pull-up enabled on all pins"
+
+# Checking Status of all GPIO pins
+status = bus.read_byte_data(0x20,0x09)
+data = 0x01
+for MyData in range(0,8):
+	pin = status & data
+	if pin == data:
+		print "Status for Pin %d is High" %MyData
+	else:
+		print "Status for Pin %d is Low" %MyData
+	data = data << 1
+	time.sleep(0.5)

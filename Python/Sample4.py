@@ -1,0 +1,29 @@
+import smbus
+import time
+
+# Get I2C bus
+bus = smbus.SMBus(1)
+
+# MCP23008 address, 0x20(32)
+# Select IODIR register, 0x00(00)
+#		0xFF(255)	All pins are configured as input
+bus.write_byte_data(0x20,0x00,0xFF)
+
+# MCP23008 address, 0x20(32)
+# Select GPPU register, 0x06(06), Enable Pull-up on all pins
+data = 0x01
+for MyData in range(0,8):
+	bus.write_byte_data(0x20,0x06,data)
+	print "GPIO Pin %d Pull-up enabled" %MyData
+	data = data << 1
+	data = data + 1
+	time.sleep(0.5)
+
+# MCP23008 address, 0x20(32)
+# Select GPPU register, 0x06(06), Disable Pull-up on all pins
+data = 0xFE
+for MyData in range(0,8):
+	bus.write_byte_data(0x20,0x06,data)
+	print "GPIO Pin %d Pull-up disabled" %MyData
+	data = data << 1
+	time.sleep(0.5)
