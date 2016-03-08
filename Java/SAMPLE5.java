@@ -26,11 +26,11 @@ public class SAMPLE5
 			byte state = (byte)(status & data) ;
 		if(state == data)
 		{
-			System.out.printf("GPIO pin %d of PORT A is HIGH %n", i);
+			System.out.printf("GPIO pin %d is HIGH %n", i);
 		}
 		else
 		{
-			System.out.printf("GPIO pin %d of PORT A is LOW %n", i);
+			System.out.printf("GPIO pin %d is LOW %n", i);
 		}
 		data = (byte)(data << 1);
 		}
