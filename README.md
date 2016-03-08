@@ -1,4 +1,4 @@
-[![MCP23008_I2CR8G5LE](MCP23008_I2CR8G5LE_I2C.png)](https://www.controleverything.com/content/Relay-Controller?sku=MCP23008_I2CR8G5LE_10A)
+[![MCP23008](MCP23008.png)](https://www.controleverything.com/content/Relay-Controller?sku=MCP23008_I2CR8G5LE_10A)
 # MCP23008
 MCP23008 I2C Relay Controller 8-Channel 
 
