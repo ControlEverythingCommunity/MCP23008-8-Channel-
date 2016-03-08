@@ -3,6 +3,7 @@
 MCP23008 I2C Relay Controller 8-Channel 
 
 The MCP23008 is a Integrated port expander that controls eight relays through the I2C bus.
+
 This Device is available from ControlEverything.com [SKU: MCP23008_I2CR8G5LE_I2CS]
 
 https://www.controleverything.com/products
