@@ -1,5 +1,8 @@
 lang:java
 lang:python
+lang:arduino
+lang:particle
+lang:C
 sku:MCP23008_ANSIO4R420
 sku:MCP23008_ANSIO4R430
 sku:MCP23008_ANSIO4R45DPDT
