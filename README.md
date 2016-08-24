@@ -96,12 +96,12 @@ Download (or git pull) the code in Onion Omega. Run the program.
 $> python Sample#.py
 ```
 
-Sample1 code turns all relays ON at once.
+#####Sample1 code turns all relays ON at once.
 
-Sample2 code turns all relays ON one by one and then turn all relays OFF one by one. 
+#####Sample2 code turns all relays ON one by one and then turn all relays OFF one by one. 
 
-Sample3 code turns pull-up registers high at once.
+#####Sample3 code turns pull-up registers high at once.
 
-Sample4 code turns pull-up registers high one by one and then turns pull-up registers low one by one.
+#####Sample4 code turns pull-up registers high one by one and then turns pull-up registers low one by one.
 
-Sample5 code turns pull-up registers high at once and then turn GPIO pins HIGH and LOW.
+#####Sample5 code turns pull-up registers high at once and then turn GPIO pins HIGH and LOW.
